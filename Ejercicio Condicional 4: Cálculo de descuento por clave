@@ -1,0 +1,42 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 4: Cálculo de descuento por clave
+        Console.WriteLine("Cálculo de descuento por clave");
+
+        // Paso 1: Pedir los datos del artículo
+        Console.Write("Ingrese el nombre del artículo: ");
+        string nombreArticulo = Console.ReadLine();
+
+        Console.Write("Ingrese la clave (01 o 02): ");
+        string clave = Console.ReadLine();
+
+        Console.Write("Ingrese el precio original: ");
+        double precioOriginal = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 2: Calcular el descuento
+        double descuento = 0;
+        if (clave == "01")
+        {
+            descuento = precioOriginal * 0.10; // 10% de descuento
+        }
+        else if (clave == "02")
+        {
+            descuento = precioOriginal * 0.20; // 20% de descuento
+        }
+
+        // Paso 3: Calcular el precio con descuento
+        double precioConDescuento = precioOriginal - descuento;
+
+        // Paso 4: Mostrar los resultados
+        Console.WriteLine("Artículo: " + nombreArticulo);
+        Console.WriteLine("Clave: " + clave);
+        Console.WriteLine("Precio original: " + precioOriginal);
+        Console.WriteLine("Precio con descuento: " + precioConDescuento);
+
+        Console.ReadKey();
+    }
+}
