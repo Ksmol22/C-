@@ -1,0 +1,56 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 2: Control de peso en club contra obesidad
+        Console.WriteLine("Control de peso en club contra obesidad");
+
+        // Paso 1: Definir variables
+        int cantidadMiembros = 5;
+        int cantidadBasculas = 10;
+
+        // Paso 2: Ciclo para cada miembro
+        for (int miembro = 1; miembro <= cantidadMiembros; miembro++)
+        {
+            Console.WriteLine("\nMiembro " + miembro);
+
+            // Paso 3: Pedir el peso anterior
+            Console.Write("Ingrese el peso anterior: ");
+            double pesoAnterior = Convert.ToDouble(Console.ReadLine());
+
+            double sumaPesos = 0;
+
+            // Paso 4: Ciclo para cada báscula
+            for (int bascula = 1; bascula <= cantidadBasculas; bascula++)
+            {
+                Console.Write("Ingrese el peso en la báscula " + bascula + ": ");
+                double pesoBastula = Convert.ToDouble(Console.ReadLine());
+                sumaPesos += pesoBastula;
+            }
+
+            // Paso 5: Calcular el promedio de peso actual
+            double promedioActual = sumaPesos / cantidadBasculas;
+
+            // Paso 6: Calcular la diferencia de peso
+            double diferencia = promedioActual - pesoAnterior;
+
+            // Paso 7: Mostrar el resultado
+            if (diferencia > 0)
+            {
+                Console.WriteLine("SUBIO " + diferencia + " kilos");
+            }
+            else if (diferencia < 0)
+            {
+                Console.WriteLine("BAJO " + Math.Abs(diferencia) + " kilos");
+            }
+            else
+            {
+                Console.WriteLine("Se mantuvo en el mismo peso");
+            }
+        }
+
+        Console.ReadKey();
+    }
+}
