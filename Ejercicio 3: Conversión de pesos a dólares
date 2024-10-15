@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 3: Conversión de pesos a dólares
+        Console.WriteLine("Conversión de pesos a dólares");
+
+        // Paso 1: Pedir la cantidad en pesos
+        Console.Write("Ingrese la cantidad en pesos: ");
+        double pesos = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 2: Pedir el tipo de cambio
+        Console.Write("Ingrese el tipo de cambio (pesos por dólar): ");
+        double tipoCambio = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 3: Calcular la equivalencia en dólares
+        double dolares = pesos / tipoCambio;
+
+        // Paso 4: Mostrar el resultado
+        Console.WriteLine("La cantidad en dólares es: " + dolares);
+
+        Console.ReadKey();
+    }
+}
