@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 5: Cálculo de precio de venta
+        Console.WriteLine("Cálculo de precio de venta");
+
+        // Paso 1: Pedir el precio de compra
+        Console.Write("Ingrese el precio de compra del artículo: ");
+        double precioCompra = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 2: Calcular la ganancia (30% del precio de compra)
+        double ganancia = precioCompra * 0.30;
+
+        // Paso 3: Calcular el precio de venta
+        double precioVenta = precioCompra + ganancia;
+
+        // Paso 4: Mostrar el resultado
+        Console.WriteLine("El precio de venta debe ser: " + precioVenta);
+
+        Console.ReadKey();
+    }
+}
