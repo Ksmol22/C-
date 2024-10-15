@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 3: Cálculo del costo de lápices
+        Console.WriteLine("Cálculo del costo de lápices");
+
+        // Paso 1: Pedir la cantidad de lápices
+        Console.Write("Ingrese la cantidad de lápices a comprar: ");
+        int cantidadLapices = Convert.ToInt32(Console.ReadLine());
+
+        // Paso 2: Determinar el precio por lápiz
+        double precioLapiz;
+        if (cantidadLapices >= 1000)
+        {
+            precioLapiz = 150;
+        }
+        else
+        {
+            precioLapiz = 250;
+        }
+
+        // Paso 3: Calcular el total a pagar
+        double totalPagar = cantidadLapices * precioLapiz;
+
+        // Paso 4: Mostrar el resultado
+        Console.WriteLine("El total a pagar es: " + totalPagar);
+
+        Console.ReadKey();
+    }
+}
