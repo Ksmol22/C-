@@ -1,0 +1,39 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 2: Cálculo de sueldo de vendedor
+        Console.WriteLine("Cálculo de sueldo de vendedor");
+
+        // Paso 1: Pedir el sueldo base
+        Console.Write("Ingrese el sueldo base del vendedor: ");
+        double sueldoBase = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 2: Pedir los montos de las tres ventas
+        Console.Write("Ingrese el monto de la primera venta: ");
+        double venta1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Ingrese el monto de la segunda venta: ");
+        double venta2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Ingrese el monto de la tercera venta: ");
+        double venta3 = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 3: Calcular el total de ventas
+        double totalVentas = venta1 + venta2 + venta3;
+
+        // Paso 4: Calcular la comisión (10% del total de ventas)
+        double comision = totalVentas * 0.10;
+
+        // Paso 5: Calcular el sueldo total
+        double sueldoTotal = sueldoBase + comision;
+
+        // Paso 6: Mostrar los resultados
+        Console.WriteLine("Comisión por ventas: " + comision);
+        Console.WriteLine("Sueldo total del mes: " + sueldoTotal);
+
+        Console.ReadKey();
+    }
+}
