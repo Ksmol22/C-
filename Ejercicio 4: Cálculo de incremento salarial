@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 4: Cálculo de incremento salarial
+        Console.WriteLine("Cálculo de incremento salarial");
+
+        // Paso 1: Pedir el salario anterior
+        Console.Write("Ingrese el salario anterior: ");
+        double salarioAnterior = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 2: Calcular el incremento (25% del salario anterior)
+        double incremento = salarioAnterior * 0.25;
+
+        // Paso 3: Calcular el nuevo salario
+        double nuevoSalario = salarioAnterior + incremento;
+
+        // Paso 4: Mostrar el resultado
+        Console.WriteLine("El nuevo salario es: " + nuevoSalario);
+
+        Console.ReadKey();
+    }
+}
