@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 1: Cálculo de interés bancario
+        Console.WriteLine("Cálculo de interés bancario");
+
+        // Paso 1: Pedir al usuario que ingrese el capital
+        Console.Write("Ingrese el capital a invertir: ");
+        double capital = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 2: Definir la tasa de interés (2% mensual = 0.02)
+        double tasaInteres = 0.02;
+
+        // Paso 3: Calcular la ganancia
+        double ganancia = capital * tasaInteres;
+
+        // Paso 4: Mostrar el resultado
+        Console.WriteLine("La ganancia después de un mes será: " + ganancia);
+
+        // Esperar a que el usuario presione una tecla antes de cerrar
+        Console.ReadKey();
+    }
+}
