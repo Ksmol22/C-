@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 5: Cálculo de matrícula con descuento
+        Console.WriteLine("Cálculo de matrícula con descuento");
+
+        // Paso 1: Definir el valor de la matrícula
+        double valorMatricula = 3500000;
+
+        // Paso 2: Pedir el promedio del aprendiz
+        Console.Write("Ingrese el promedio del aprendiz: ");
+        double promedio = Convert.ToDouble(Console.ReadLine());
+
+        // Paso 3: Calcular el valor a pagar
+        double valorPagar;
+        if (promedio >= 4.5)
+        {
+            // 30% de descuento, sin IVA
+            valorPagar = valorMatricula * 0.70;
+        }
+        else
+        {
+            // Sin descuento, con 10% de IVA
+            valorPagar = valorMatricula * 1.10;
+        }
+
+        // Paso 4: Mostrar el resultado
+        Console.WriteLine("El valor a pagar es: " + valorPagar);
+
+        Console.ReadKey();
+    }
+}
