@@ -1,0 +1,62 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Ejercicio 1: Descuentos en teatro por edad
+        Console.WriteLine("Descuentos en teatro por edad");
+
+        // Paso 1: Definir variables
+        double precioEntrada = 10000; // Precio base de la entrada
+        int cantidadClientes;
+        double totalDescuentos = 0;
+
+        // Paso 2: Pedir la cantidad de clientes
+        Console.Write("Ingrese la cantidad de clientes: ");
+        cantidadClientes = Convert.ToInt32(Console.ReadLine());
+
+        // Paso 3: Ciclo para procesar cada cliente
+        for (int i = 1; i <= cantidadClientes; i++)
+        {
+            Console.Write("Ingrese la edad del cliente " + i + ": ");
+            int edad = Convert.ToInt32(Console.ReadLine());
+
+            double descuento = 0;
+
+            // Paso 4: Calcular descuento según la edad
+            if (edad < 5)
+            {
+                Console.WriteLine("Los menores de 5 años no pueden entrar al teatro.");
+                continue;
+            }
+            else if (edad >= 5 && edad <= 14)
+            {
+                descuento = precioEntrada * 0.35;
+            }
+            else if (edad >= 15 && edad <= 19)
+            {
+                descuento = precioEntrada * 0.25;
+            }
+            else if (edad >= 20 && edad <= 45)
+            {
+                descuento = precioEntrada * 0.10;
+            }
+            else if (edad >= 46 && edad <= 65)
+            {
+                descuento = precioEntrada * 0.25;
+            }
+            else
+            {
+                descuento = precioEntrada * 0.35;
+            }
+
+            totalDescuentos += descuento;
+        }
+
+        // Paso 5: Mostrar el resultado
+        Console.WriteLine("El teatro dejó de percibir en total: " + totalDescuentos);
+
+        Console.ReadKey();
+    }
+}
